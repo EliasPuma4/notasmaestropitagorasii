@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maestro Pitágoras II</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Logo Unidad Educativa" id="logo">
+        <h1>Unidad Educativa Plena Maestro Pitágoras II</h1>
+        <p>Nivel Secundario Comunitario Productivo</p>
+    </header>
+    <main>
+        <section id="profesor-login">
+            <h2>Login de Profesores de Unidad Educativa</h2>
+            <input type="text" id="prof-usuario" placeholder="Usuario">
+            <input type="password" id="prof-password" placeholder="Contraseña">
+            <button onclick="loginProfesor()">Iniciar Sesión</button>
+            <p id="login-msg"></p>
+        </section>
+        <section id="subir-notas" style="display:none;">
+            <h2>Subir Excel de Notas</h2>
+            <input type="file" id="excel-file" accept=".xlsx,.xls">
+            <button onclick="procesarExcel()">Cargar Notas</button>
+        </section>
+        <section id="busqueda-estudiante" style="display:none;">
+            <h2>Buscar Nota</h2>
+            <input type="text" id="busqueda" placeholder="Nombre o carnet" oninput="autocompletar()">
+            <ul id="sugerencias"></ul>
+            <div id="descargar-pdf"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Autores: Reyna Copa Suyo y Marioly Nicoly Quispe Alvarado</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
